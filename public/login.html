@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>登录界面</title>
+	<script type="text/javascript">
+		function show(){
+			var _uname=uname.value;
+			var _upwd=upwd.value;
+			var xhr=new XMLHttpRequest();
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var x=xhr.responseText;
+					alert(x);
+				}
+			}
+			
+			xhr.open("post","/v1/user/login",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			var formdata=`uname=${_uname}&upwd=${_upwd}`;
+			xhr.send(formdata);
+		
+		}
+	</script>
+ </head>
+ <body>
+	 <div>
+		用户名:<input type="text" id="uname"><span></span><br>
+		登录密码:<input type="text" id="upwd"><span></span><br>
+		<button onclick="show()">登录</button>
+		</div>
+ </body>
+</html>

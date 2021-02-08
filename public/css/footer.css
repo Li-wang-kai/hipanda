@@ -1,0 +1,19 @@
+body{
+  background-color: #353535;
+  color: #eee;
+}
+a{
+  text-decoration: none !important;
+  color: #aaa;
+}
+ul{list-style: none;}
+div ul>li:first-child{
+  color:#fff;
+  font: 1.5rem bold;
+}
+.my_font1{
+  font: 3rem jokerman;
+}
+div p{
+  font-size: 1rem;
+}
